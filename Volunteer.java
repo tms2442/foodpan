@@ -13,18 +13,19 @@ public class Volunteer {
 	String firstName, lastName;
 	String dob;
 	String affiliation;
-	String retired;
+	boolean retired;
 	String phone, email, street, city, state,
 	emergencyName, emergencyPhone;
 	String zip;
 	String startDate;
 	String endDate;
 	String searchparam;
+	boolean courtordered;
 	
 	//Constructor
-	public Volunteer(int id, String firstName, String lastName, String dob, String affiliation, String retired, String phone,
+	public Volunteer(int id, String firstName, String lastName, String dob, String affiliation, boolean retired, String phone,
 			String email, String street, String city, String state, String emergencyName, String emergencyPhone,
-			String zip, String startDate, String endDate) {
+			String zip, String startDate, String endDate, boolean courtordered) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -42,6 +43,7 @@ public class Volunteer {
 		this.zip = zip;
 		this.startDate = startDate;
 		this.endDate = endDate;
+		this.courtordered = courtordered;
 	}
 
 
@@ -50,6 +52,21 @@ public class Volunteer {
 	}
 
 	//Getters and setters
+	
+	public Volunteer(String string, String string2, String string3, String string4, String string5, String string6,
+			String string7, String string8, String string9, String string10, String string11, String string12,
+			String string13, String string14, String string15) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Boolean getCourtOrdered() {
+		return courtordered;
+	}
+	
+	public void setCourtOrdered(boolean courtordered) {
+		this.courtordered = courtordered;
+	}
 	
 	public String getSearchParam() {
 		return searchparam;
@@ -99,12 +116,12 @@ public class Volunteer {
 		this.affiliation = affiliation;
 	}
 
-	public String isRetired() {
+	public boolean isRetired() {
 		return retired;
 	}
 
-	public void setRetired(String retired) {
-		this.retired = retired;
+	public void setRetired(boolean b) {
+		this.retired = b;
 	}
 
 	public String getPhone() {
